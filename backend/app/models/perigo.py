@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 from sqlalchemy import Float, ForeignKey, Integer, String
-from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from ..db import Base
+from ..db import Base, JSONType
 
 
 class Perigo(Base):
@@ -32,13 +31,13 @@ class Perigo(Base):
     dph: Mapped[float] = mapped_column(Float)
     np: Mapped[float] = mapped_column(Float)
     # Justificativa por fator (mapa fator -> texto). Regra: "nunca suponha".
-    justificativas: Mapped[dict] = mapped_column(JSONB, default=dict)
+    justificativas: Mapped[dict] = mapped_column(JSONType, default=dict)
 
     hrn_atual: Mapped[float] = mapped_column(Float, default=0)
     classif_atual: Mapped[str | None] = mapped_column(String(32), nullable=True)
 
     # Medidas pela hierarquia ISO 12100, prefixadas "M1 — …" … "M4 — …".
-    medidas: Mapped[list] = mapped_column(JSONB, default=list)
+    medidas: Mapped[list] = mapped_column(JSONType, default=list)
 
     # Fatores APÓS as medidas (nulos até o engenheiro reavaliar).
     lo_pos: Mapped[float | None] = mapped_column(Float, nullable=True)
@@ -49,7 +48,7 @@ class Perigo(Base):
     hrn_pos: Mapped[float | None] = mapped_column(Float, nullable=True)
     classif_pos: Mapped[str | None] = mapped_column(String(32), nullable=True)
 
-    normas_violadas: Mapped[list] = mapped_column(JSONB, default=list)
+    normas_violadas: Mapped[list] = mapped_column(JSONType, default=list)
     ordem: Mapped[int] = mapped_column(Integer, default=0)
 
     laudo: Mapped["Laudo"] = relationship(back_populates="perigos")  # noqa: F821

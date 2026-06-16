@@ -32,7 +32,32 @@ docker-compose.yml   PostgreSQL para desenvolvimento
 
 - Python 3.11+
 - Node 18+
-- Docker (para o PostgreSQL de desenvolvimento)
+- Docker (para o PostgreSQL de desenvolvimento) — **opcional** se usar o modo SQLite abaixo
+
+## Teste rápido (sem Docker, com SQLite + dados de exemplo)
+
+Caminho mais curto para ver a plataforma funcionando, sem instalar Postgres:
+
+```bash
+# backend
+cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+export CELONE_DATABASE_URL="sqlite:///./celone.db"   # Windows: set CELONE_DATABASE_URL=...
+python seed.py                 # cria as tabelas (SQLite) e popula um laudo de exemplo
+uvicorn app.main:app --reload  # API em http://localhost:8000
+
+# frontend (em outro terminal)
+cd frontend && npm install && npm run dev   # http://localhost:5173
+```
+
+Abra **http://localhost:5173**, clique em **"Abrir laudo existente"** (o laudo #1 do seed)
+e explore o motor HRN, a galeria de fotos e o botão **Gerar DOCX**. Mantenha
+`CELONE_DATABASE_URL` exportada no terminal do backend enquanto roda.
+
+> O modo SQLite é só para teste local. Em produção/desenvolvimento "de verdade", use o
+> PostgreSQL com as migrações Alembic (seções abaixo).
 
 ## 1. Banco de dados
 

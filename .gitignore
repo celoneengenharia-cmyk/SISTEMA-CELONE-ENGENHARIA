@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Storage local (fotos e DOCX gerados nesta fase)
+backend/storage/
+storage/
+
+# Node / frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+frontend/vite.config.d.ts
+
+# Ambiente
+.env
+*.local
+
+# Editores / SO
+.DS_Store
+.idea/
+.vscode/

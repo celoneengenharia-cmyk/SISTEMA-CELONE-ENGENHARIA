@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    container_name: celone_laudos_db
+    environment:
+      POSTGRES_USER: celone
+      POSTGRES_PASSWORD: celone
+      POSTGRES_DB: celone
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U celone"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:

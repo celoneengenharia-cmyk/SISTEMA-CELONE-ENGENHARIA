@@ -40,11 +40,11 @@ PAGINAS = [
         codigo="HVAC",
         assunto="projeto de exaustão ou climatização",
         seo_titulo="Projeto de Exaustão e Climatização com ART | Celone Engenharia",
-        seo_desc="Projeto de exaustão de cozinha, ventilação e climatização (HVAC) com memorial de cálculo, desenhos e ART. Atendimento em todo o Brasil.",
-        servicos=["Projeto de exaustão de cozinha", "Projeto de ventilação e antecâmara", "Projeto de climatização e HVAC", "Projeto de redes de vapor e ar comprimido"],
+        seo_desc="Projeto de exaustão, ventilação e climatização (HVAC) com memorial de cálculo, desenhos e ART. Atendemos empresas em todo o Brasil.",
+        servicos=["Projeto de exaustão", "Projeto de ventilação e antecâmara", "Projeto de climatização e HVAC", "Projeto de redes de vapor e ar comprimido"],
         rotulo="Projetos mecânicos com ART",
         titulo='Projeto de exaustão e climatização <em class="g">pronto para aprovar</em>',
-        sub="Memorial, desenhos e ART na mão para a vigilância sanitária e os bombeiros. Seu instalador recebe tudo pronto para cotar e executar. <strong>Cozinhas, laboratórios, indústrias e farmacêuticas em todo o Brasil.</strong>",
+        sub="Memorial, desenhos e ART na mão para aprovar na vigilância sanitária e nos bombeiros. Seu instalador recebe tudo pronto para cotar e executar. <strong>Atendemos empresas em todo o Brasil.</strong>",
         btn="Receber proposta hoje",
         nota="Escopo, valor e prazo no mesmo dia, direto com o engenheiro, pelo WhatsApp.",
         faixa=[("Responsável técnico", "Eng. Matteo Celone · CREA 2118861648"), ("Entrega", "Memorial, desenhos (DWG, PDF, Revit) e ART"), ("Proposta", "No mesmo dia · todo o Brasil")],
@@ -56,19 +56,20 @@ PAGINAS = [
         prova_rotulo=None,
         destaque=["LAFEPE", "Karne Keijo", "N1MED", "LD Diagnósticos", "AABB Natal", "Sesc"],
         mostrar_clientes=False,
+        rt_no_inicio=True,  # responsável técnico logo após "Quando você precisa"
         alerta=None,
         quando_titulo='Prazo para aprovar? <em class="g">A gente resolve.</em>',
         quando=[
-            ("Vigilância sanitária", "Pediu o projeto de exaustão da cozinha ou a ventilação do laboratório. Entregamos pronto para protocolar."),
+            ("Vigilância sanitária", "Pediu o projeto de exaustão ou ventilação. Entregamos pronto para protocolar."),
             ("Bombeiros", "O projeto de incêndio travou na exaustão ou na ventilação da antecâmara. Dimensionamos e assinamos."),
             ("Obra ou reforma", "A climatização precisa fechar com a arquitetura e a elétrica antes da obra começar."),
-            ("Calor, fumaça e cheiro", "Cozinha quente, gordura no ar ou vizinho reclamando do cheiro. Resolvemos na origem."),
+            ("Conforto e qualidade do ar", "Ambiente quente, ar parado, fumaça ou cheiro incomodando a equipe ou os vizinhos. Resolvemos na origem."),
             ("Escritórios e construtoras", "Terceirize a disciplina de HVAC com quem calcula, desenha e assina."),
         ],
         fazemos_titulo='Exaustão, ventilação e climatização <em class="g">num só projeto</em>',
         blocos=[
-            ("Exaustão de cozinha", None, "Coifa dimensionada para cada equipamento, dutos, exaustor e filtro, conforme a NBR 14518. Sem fumaça no salão e sem reclamação do vizinho.", ["Restaurantes, hamburguerias e refeitórios", "Filtro eletrostático contra cheiro e gordura", "Ar de reposição dimensionado"]),
-            ("Ventilação e antecâmara", None, "Vazões e renovação de ar calculadas ambiente por ambiente, prontas para o projeto de incêndio.", ["Antecâmara exigida pelos bombeiros", "Laboratórios, sanitários e DML", "Casa de máquinas e exaustão de solda"]),
+            ("Exaustão", None, "Captação, dutos, exaustor e filtragem dimensionados para a sua operação. Ar limpo dentro e fora da empresa.", ["Exaustão industrial e de processos", "Coifas e cozinhas industriais (NBR 14518)", "Filtragem de fumaça, gordura e odores"]),
+            ("Ventilação e antecâmara", None, "Vazões e renovação de ar calculadas ambiente por ambiente, prontas para o projeto de incêndio.", ["Antecâmara exigida pelos bombeiros", "Laboratórios, áreas técnicas e sanitários", "Casa de máquinas e exaustão de solda"]),
             ("Climatização e HVAC", None, "Carga térmica por ambiente e a tecnologia certa para o seu uso, com dutos, tubulações e drenos.", ["Split, cassete, VRF e água gelada", "Qualidade do ar conforme a NBR 16401", "Gradiente de pressão entre salas"]),
             ("Vapor e ar comprimido", None, "Redes de utilidades projetadas junto com o HVAC e compatibilizadas no entreforro.", ["Troncais, ramais e pontos por sala", "Ar em contato com o produto (ISO 8573-1)", "Interface com a NR-13"]),
         ],
@@ -101,7 +102,7 @@ PAGINAS = [
         faq_titulo='Dúvidas sobre o <em class="g">projeto de exaustão</em>',
         faq=[
             ("Vocês atendem a minha cidade?", "Sim. Atendemos todo o Brasil, com clientes em 15 estados. O levantamento pode ser presencial ou por vídeo, e o projeto e a ART são os mesmos."),
-            ("O projeto serve para a vigilância sanitária e para os bombeiros?", "Sim. Sai com memorial de cálculo, desenhos e ART, conforme a NBR 14518 (exaustão de cozinha) e a NBR 16401 (climatização e renovação de ar). E seguimos com você até a aprovação."),
+            ("O projeto serve para a vigilância sanitária e para os bombeiros?", "Sim. Sai com memorial de cálculo, desenhos e ART, conforme as normas ABNT aplicáveis, como a NBR 16401 (climatização e qualidade do ar). E seguimos com você até a aprovação."),
             ("Meu instalador consegue executar o projeto?", "Sim. Ele recebe desenhos detalhados e a lista de materiais pronta para cotar. Se você ainda não tem instalador, indicamos parceiros de confiança."),
             ("Em quanto tempo fica pronto?", "Depende do tamanho e do número de ambientes. O prazo vem junto com o valor na proposta, que você recebe no mesmo dia."),
             ("O que preciso mandar para o orçamento?", "Planta ou croqui, fotos do local, a lista de equipamentos e quem está exigindo o projeto. Se não tiver tudo, mande o que tem que a gente orienta."),
@@ -288,6 +289,36 @@ def gerar(p):
         secao += 1
         return f'<span class="label">{secao} · {nome}</span>'
 
+    def rt():
+        cv = [
+            ("Politecnico di Torino", "Engenharia mecânica na Itália"),
+            ("UFRN", "Engenheiro mecânico e mestre"),
+            ("USP", "Especialização em análise de dados e gestão de projetos"),
+            ("Nestlé Brasil", "Gestor de projetos industriais"),
+            ("Petrobras · Brava Energia", "Atuação em óleo e gás"),
+            ("CREA 2118861648", "ART em todo projeto"),
+        ]
+        itens = "\n        ".join(f"<div><b>{e(t)}</b><span>{e(d)}</span></div>" for t, d in cv)
+        return f'''
+<section class="rtx" id="sobre">
+  <div class="wrap rt">
+    <figure class="portrait-wrap">
+      <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
+      <figcaption><b>Eng. Matteo Celone</b><span>Engenheiro mecânico · M.Sc. · CREA 2118861648</span></figcaption>
+    </figure>
+    <div>
+      {rot("Responsável técnico")}
+      <h2>Seu projeto assinado pelo <em class="g">Eng. Matteo Celone</em></h2>
+      <p class="lead">Formação no Brasil e na Itália, mestrado em engenharia e experiência na gestão de projetos de grandes indústrias. Matteo revisa e assina pessoalmente cada projeto — e é com ele que você fala no WhatsApp.</p>
+      <div class="cv">
+        {itens}
+      </div>
+      <div class="cta-row">{btn("Falar direto com o Eng. Matteo")}</div>
+    </div>
+  </div>
+</section>
+'''
+
     destaque_base = {n.split(" (")[0] for n in p["destaque"]}
     outros = [c for c in CLIENTES_GERAL if c not in destaque_base]
     menu = "\n      ".join(
@@ -373,6 +404,9 @@ def gerar(p):
   </div>
 </section>
 ''')
+
+    if p.get("rt_no_inicio"):
+        w(rt())
 
     blocos = []
     for titulo, para, texto, itens in p["blocos"]:
@@ -495,22 +529,10 @@ def gerar(p):
   </div>
 </section>
 
-<section class="alt" id="sobre">
-  <div class="wrap rt">
-    <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
-    <div>
-      {rot("Responsável técnico")}
-      <h2>Quem assina o seu <em class="g">projeto</em></h2>
-      <p>Engenheiro mecânico formado pela UFRN e pela Politecnico di Torino (Itália), mestre pela UFRN e com especialização em análise de dados e gestão de projetos pela USP. Foi gestor de projetos industriais na Nestlé Brasil e atuou na Petrobras e na Brava Energia. Mais do que documentos, entrega clareza, segurança e respaldo técnico.</p>
-      <div class="creds">
-        <div><span>Registro</span><p>CREA 2118861648</p></div>
-        <div><span>Formação</span><p>UFRN · Politecnico di Torino · Mestrado UFRN · USP</p></div>
-        <div><span>Indústria</span><p>Nestlé Brasil · Petrobras · Brava Energia</p></div>
-        <div><span>Escritório</span><p>Natal/RN · atendimento em todo o Brasil</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+''')
+    if not p.get("rt_no_inicio"):
+        w(rt())
+    w(f'''
 ''')
 
     faq = "\n      ".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in p["faq"])

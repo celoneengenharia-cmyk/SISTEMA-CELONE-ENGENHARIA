@@ -258,6 +258,26 @@ footer a{color:var(--text)}
 .trust-num{margin-top:24px;color:var(--text)}
 .trust-num b{color:var(--gold);font-weight:600}
 @media (min-width:860px){.slots{grid-template-columns:repeat(4,1fr)}.slot{min-height:110px}}
+
+/* Responsável técnico em destaque */
+.rtx{background:linear-gradient(180deg,var(--bg2),var(--bg));border-top:1px solid var(--gold3)}
+.portrait-wrap .portrait{max-width:300px}
+@media (min-width:860px){.portrait-wrap .portrait{max-width:none}}
+.portrait-wrap figcaption{margin-top:14px;display:flex;flex-direction:column;gap:2px}
+.portrait-wrap figcaption b{font:400 1.2rem/1.3 var(--f-title);color:var(--title)}
+.portrait-wrap figcaption span{font:400 .72rem/1.5 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cv{display:grid;grid-template-columns:1fr 1fr;margin-top:30px;border-top:1px solid var(--line)}
+.cv div{padding:20px 16px 20px 0;border-bottom:1px solid var(--line)}
+.cv div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.cv b{display:block;font:300 clamp(1.15rem,2.4vw,1.6rem)/1.2 var(--f-title);color:var(--gold);margin-bottom:6px}
+.cv span{font-size:.88rem;color:var(--text);line-height:1.45;display:block}
+@media (min-width:860px){
+  .rtx .rt{grid-template-columns:400px 1fr}
+  .cv{grid-template-columns:repeat(3,1fr)}
+  .cv div{padding:24px 20px 24px 0}
+  .cv div:nth-child(even){padding-left:0;border-left:0}
+  .cv div:not(:nth-child(3n+1)){padding-left:20px;border-left:1px solid var(--line)}
+}
 </style>
 </head>
 <body>
@@ -430,22 +450,30 @@ footer a{color:var(--text)}
   </div>
 </section>
 
-<section class="alt" id="sobre">
+
+<section class="rtx" id="sobre">
   <div class="wrap rt">
-    <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
+    <figure class="portrait-wrap">
+      <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
+      <figcaption><b>Eng. Matteo Celone</b><span>Engenheiro mecânico · M.Sc. · CREA 2118861648</span></figcaption>
+    </figure>
     <div>
       <span class="label">7 · Responsável técnico</span>
-      <h2>Quem assina o seu <em class="g">projeto</em></h2>
-      <p>Engenheiro mecânico formado pela UFRN e pela Politecnico di Torino (Itália), mestre pela UFRN e com especialização em análise de dados e gestão de projetos pela USP. Foi gestor de projetos industriais na Nestlé Brasil e atuou na Petrobras e na Brava Energia. Mais do que documentos, entrega clareza, segurança e respaldo técnico.</p>
-      <div class="creds">
-        <div><span>Registro</span><p>CREA 2118861648</p></div>
-        <div><span>Formação</span><p>UFRN · Politecnico di Torino · Mestrado UFRN · USP</p></div>
-        <div><span>Indústria</span><p>Nestlé Brasil · Petrobras · Brava Energia</p></div>
-        <div><span>Escritório</span><p>Natal/RN · atendimento em todo o Brasil</p></div>
+      <h2>Seu projeto assinado pelo <em class="g">Eng. Matteo Celone</em></h2>
+      <p class="lead">Formação no Brasil e na Itália, mestrado em engenharia e experiência na gestão de projetos de grandes indústrias. Matteo revisa e assina pessoalmente cada projeto — e é com ele que você fala no WhatsApp.</p>
+      <div class="cv">
+        <div><b>Politecnico di Torino</b><span>Engenharia mecânica na Itália</span></div>
+        <div><b>UFRN</b><span>Engenheiro mecânico e mestre</span></div>
+        <div><b>USP</b><span>Especialização em análise de dados e gestão de projetos</span></div>
+        <div><b>Nestlé Brasil</b><span>Gestor de projetos industriais</span></div>
+        <div><b>Petrobras · Brava Energia</b><span>Atuação em óleo e gás</span></div>
+        <div><b>CREA 2118861648</b><span>ART em todo projeto</span></div>
       </div>
+      <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Falar direto com o Eng. Matteo</a></div>
     </div>
   </div>
 </section>
+
 
 <section>
   <div class="wrap">

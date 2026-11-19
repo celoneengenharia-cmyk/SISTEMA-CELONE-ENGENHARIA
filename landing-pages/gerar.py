@@ -52,6 +52,13 @@ PAGINAS = [
         prova_topo=dict(
             titulo='Empresas que já confiam na <em class="g">Celone Engenharia</em>',
             vagas=8,
+            # (arquivo em _base/img/clientes/, nome da empresa) — logos em branco, fundo transparente
+            logos=[
+                ("axia-energia.png", "AXIA Energia"),
+                ("jt-express.png", "J&T Express"),
+                ("acotubo.png", "Grupo Açotubo"),
+                ("guararapes-riachuelo.png", "Guararapes | Riachuelo"),
+            ],
         ),
         prova_rotulo=None,
         destaque=["LAFEPE", "Karne Keijo", "N1MED", "LD Diagnósticos", "AABB Natal", "Sesc"],
@@ -291,9 +298,12 @@ def prova_topo(p):
     """
     pt = p.get("prova_topo")
     if pt:
-        vagas = "\n      ".join(
-            f'<div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa {i}]</div>'
-            for i in range(1, pt["vagas"] + 1))
+        logos = pt.get("logos", [])
+        itens = [f'<div class="slot"><img src="../_base/img/clientes/{arq}" alt="{e(nome)}" loading="lazy"></div>'
+                 for arq, nome in logos]
+        itens += [f'<div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa {i}]</div>'
+                  for i in range(len(logos) + 1, pt["vagas"] + 1)]
+        vagas = "\n      ".join(itens)
         return f'''
 <!-- PROVA SOCIAL NO TOPO: preencher com as empresas escolhidas pelo Matteo -->
 <section class="trust">

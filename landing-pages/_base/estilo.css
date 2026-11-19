@@ -247,3 +247,7 @@ footer a{color:var(--text)}
   .table td{display:block;border:0;padding:3px 0 3px 36px}
   .table td:first-child{padding-left:0}
 }
+
+/* Retrato real */
+.portrait-img{width:100%;height:auto;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;display:block;border:1px solid var(--line)}
+@media (min-width:860px){.portrait-img{max-width:none}}

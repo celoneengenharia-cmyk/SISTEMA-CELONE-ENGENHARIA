@@ -332,7 +332,7 @@ def gerar(p):
 <section class="rtx" id="sobre">
   <div class="wrap rt">
     <figure class="portrait-wrap">
-      <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
+      <img class="portrait-img" src="../_base/img/matteo-celone.webp" width="800" height="1000" loading="lazy" alt="Eng. Matteo Celone, responsável técnico da Celone Engenharia, no escritório em Natal/RN">
       <figcaption><b>Eng. Matteo Celone</b><span>Engenheiro mecânico · M.Sc. · CREA 2118861648</span></figcaption>
     </figure>
     <div class="bio">

@@ -307,6 +307,10 @@ footer a{color:var(--text)}
   .table td{display:block;border:0;padding:3px 0 3px 36px}
   .table td:first-child{padding-left:0}
 }
+
+/* Retrato real */
+.portrait-img{width:100%;height:auto;max-width:300px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;display:block;border:1px solid var(--line)}
+@media (min-width:860px){.portrait-img{max-width:none}}
 </style>
 </head>
 <body>
@@ -486,7 +490,7 @@ footer a{color:var(--text)}
 <section class="rtx" id="sobre">
   <div class="wrap rt">
     <figure class="portrait-wrap">
-      <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
+      <img class="portrait-img" src="../_base/img/matteo-celone.webp" width="800" height="1000" loading="lazy" alt="Eng. Matteo Celone, responsável técnico da Celone Engenharia, no escritório em Natal/RN">
       <figcaption><b>Eng. Matteo Celone</b><span>Engenheiro mecânico · M.Sc. · CREA 2118861648</span></figcaption>
     </figure>
     <div class="bio">

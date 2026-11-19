@@ -42,66 +42,72 @@ PAGINAS = [
         seo_titulo="Projeto de Exaustão e Climatização com ART | Celone Engenharia",
         seo_desc="Projeto de exaustão de cozinha, ventilação e climatização (HVAC) com memorial de cálculo, desenhos e ART. Atendimento em todo o Brasil.",
         servicos=["Projeto de exaustão de cozinha", "Projeto de ventilação e antecâmara", "Projeto de climatização e HVAC", "Projeto de redes de vapor e ar comprimido"],
-        rotulo="Projetos mecânicos",
-        titulo='Projeto de exaustão e <em class="g">climatização</em>',
-        sub="Da coifa da cozinha à planta farmacêutica. Calculamos, desenhamos e assinamos o projeto que a vigilância sanitária, os bombeiros e o seu instalador vão usar. <strong>Atendemos todo o Brasil.</strong>",
-        btn="Pedir proposta do projeto",
-        nota="Escopo, valor e prazo no mesmo dia, pelo WhatsApp. Não vendemos nem instalamos equipamentos: fazemos o projeto e a ART.",
-        faixa=[("Responsável técnico", "Eng. Matteo Celone · CREA 2118861648"), ("Entrega", "Memorial, desenhos e ART"), ("Atendimento", "Todo o Brasil, desde 2019")],
-        prova_rotulo="Projetos de HVAC para",
+        rotulo="Projetos mecânicos com ART",
+        titulo='Projeto de exaustão e climatização <em class="g">pronto para aprovar</em>',
+        sub="Memorial, desenhos e ART na mão para a vigilância sanitária e os bombeiros. Seu instalador recebe tudo pronto para cotar e executar. <strong>Cozinhas, laboratórios, indústrias e farmacêuticas em todo o Brasil.</strong>",
+        btn="Receber proposta hoje",
+        nota="Escopo, valor e prazo no mesmo dia, direto com o engenheiro, pelo WhatsApp.",
+        faixa=[("Responsável técnico", "Eng. Matteo Celone · CREA 2118861648"), ("Entrega", "Memorial, desenhos (DWG, PDF, Revit) e ART"), ("Proposta", "No mesmo dia · todo o Brasil")],
+        # Bloco "Empresas que já confiam" logo após o topo, com espaços para preencher
+        prova_topo=dict(
+            titulo='Empresas que já confiam na <em class="g">Celone Engenharia</em>',
+            vagas=8,
+        ),
+        prova_rotulo=None,
         destaque=["LAFEPE", "Karne Keijo", "N1MED", "LD Diagnósticos", "AABB Natal", "Sesc"],
+        mostrar_clientes=False,
         alerta=None,
-        quando_titulo='Quando você precisa do <em class="g">projeto de exaustão</em>',
+        quando_titulo='Prazo para aprovar? <em class="g">A gente resolve.</em>',
         quando=[
-            ("Vigilância sanitária", "Pediu o projeto de exaustão da cozinha ou a ventilação do laboratório."),
-            ("Bombeiros", "O projeto de incêndio exige exaustão ou ventilação de antecâmara."),
-            ("Obra ou reforma", "A climatização precisa ser compatibilizada com arquitetura e elétrica."),
-            ("Calor, fumo e cheiro", "O ambiente esquenta, junta fumo, gordura ou cheiro — inclusive com o vizinho reclamando."),
-            ("Escritórios e construtoras", "Você quer terceirizar a disciplina de HVAC com quem assina."),
+            ("Vigilância sanitária", "Pediu o projeto de exaustão da cozinha ou a ventilação do laboratório. Entregamos pronto para protocolar."),
+            ("Bombeiros", "O projeto de incêndio travou na exaustão ou na ventilação da antecâmara. Dimensionamos e assinamos."),
+            ("Obra ou reforma", "A climatização precisa fechar com a arquitetura e a elétrica antes da obra começar."),
+            ("Calor, fumaça e cheiro", "Cozinha quente, gordura no ar ou vizinho reclamando do cheiro. Resolvemos na origem."),
+            ("Escritórios e construtoras", "Terceirize a disciplina de HVAC com quem calcula, desenha e assina."),
         ],
-        fazemos_titulo='Exaustão, ventilação e <em class="g">climatização</em> com ART',
+        fazemos_titulo='Exaustão, ventilação e climatização <em class="g">num só projeto</em>',
         blocos=[
-            ("Exaustão de cozinha", None, "Coifa dimensionada por equipamento de cocção, dutos, exaustor, filtro e caixa de ventilação, conforme a NBR 14518.", ["Restaurantes, hamburguerias e refeitórios", "Filtro eletrostático para cheiro e gordura", "Ar de reposição"]),
-            ("Ventilação e antecâmara", None, "Vazões, renovação de ar e exaustão mecânica por ramal.", ["Antecâmara do projeto de incêndio", "Laboratórios, sanitários e DML", "Casa de máquinas e exaustão de solda"]),
-            ("Climatização e HVAC", None, "Carga térmica por ambiente, escolha da tecnologia, dutos, tubulações e drenos.", ["Split, cassete, VRF e água gelada", "Renovação e qualidade do ar (NBR 16401)", "Gradiente de pressão entre salas"]),
-            ("Vapor e ar comprimido", None, "Redes de utilidades projetadas junto do HVAC, compatibilizadas no entreforro.", ["Troncais, ramais e pontos por sala", "Ar em contato com o produto (ISO 8573-1)", "Interface com a NR-13"]),
+            ("Exaustão de cozinha", None, "Coifa dimensionada para cada equipamento, dutos, exaustor e filtro, conforme a NBR 14518. Sem fumaça no salão e sem reclamação do vizinho.", ["Restaurantes, hamburguerias e refeitórios", "Filtro eletrostático contra cheiro e gordura", "Ar de reposição dimensionado"]),
+            ("Ventilação e antecâmara", None, "Vazões e renovação de ar calculadas ambiente por ambiente, prontas para o projeto de incêndio.", ["Antecâmara exigida pelos bombeiros", "Laboratórios, sanitários e DML", "Casa de máquinas e exaustão de solda"]),
+            ("Climatização e HVAC", None, "Carga térmica por ambiente e a tecnologia certa para o seu uso, com dutos, tubulações e drenos.", ["Split, cassete, VRF e água gelada", "Qualidade do ar conforme a NBR 16401", "Gradiente de pressão entre salas"]),
+            ("Vapor e ar comprimido", None, "Redes de utilidades projetadas junto com o HVAC e compatibilizadas no entreforro.", ["Troncais, ramais e pontos por sala", "Ar em contato com o produto (ISO 8573-1)", "Interface com a NR-13"]),
         ],
-        recebe_titulo='O que vem no <em class="g">projeto de exaustão e climatização</em>',
+        recebe_titulo='Tudo o que você recebe, <em class="g">pronto para protocolar</em>',
         recebe=[
             ("Memorial de cálculo", "Vazões, carga térmica, perdas de carga e dimensionamento", "PDF assinado", False),
-            ("Memorial descritivo", "Especificação do sistema e dos equipamentos", "PDF · DOCX", False),
+            ("Memorial descritivo", "Especificação completa do sistema e dos equipamentos", "PDF · DOCX", False),
             ("Desenhos", "Planta, cortes, isométricos e detalhes", "PDF · DWG · Revit", False),
-            ("Lista de materiais", "Para o seu instalador cotar", "PDF · XLSX", False),
-            ("ART", "Anotação de responsabilidade técnica recolhida no CREA", "PDF", False),
-            ("Acompanhamento", "Quando há protocolo em órgão, acompanhamos até a aprovação", "—", False),
+            ("Lista de materiais", "Seu instalador cota e compra sem retrabalho", "PDF · XLSX", False),
+            ("ART", "Responsabilidade técnica recolhida no CREA", "PDF", False),
+            ("Acompanhamento", "Seguimos com você até a aprovação no órgão", "—", False),
         ],
-        como_titulo='Como funciona o <em class="g">projeto de climatização</em>',
-        como_lead="Você não precisa esperar visita: o levantamento pode ser por vídeo, com as medidas guiadas pela nossa equipe.",
+        como_titulo='Do primeiro contato à <em class="g">aprovação</em>, em 4 passos',
+        como_lead="Sem esperar visita: o levantamento pode ser feito por vídeo, com a nossa equipe guiando cada medida.",
         passos=[
-            ("Você manda o que tem", "Planta ou croqui, fotos, lista de equipamentos e quem está exigindo o projeto."),
-            ("Respondemos com escopo, valor e prazo", "Em geral no mesmo dia, pelo WhatsApp."),
-            ("Levantamento por visita ou vídeo", "Na vistoria assistida, orientamos por vídeo o que fotografar e medir. O projeto e a ART são os mesmos."),
-            ("Entrega com ART", "E acompanhamento até a aprovação na vigilância ou nos bombeiros."),
+            ("Mande o que você tem", "Planta ou croqui, fotos, lista de equipamentos e quem está exigindo o projeto."),
+            ("Receba a proposta no mesmo dia", "Escopo, valor e prazo, direto no WhatsApp."),
+            ("Levantamento presencial ou por vídeo", "Orientamos o que fotografar e medir. O projeto e a ART são os mesmos."),
+            ("Projeto entregue com ART", "E seguimos com você até a aprovação na vigilância ou nos bombeiros."),
         ],
-        nao_fazemos="Não vendemos nem instalamos equipamentos. Fazemos o projeto e a ART; o seu instalador executa com as medidas certas. Se precisar, indicamos um parceiro.",
+        nao_fazemos=None,
         numeros=[("300+", "clientes atendidos"), ("15", "estados"), ("5.450 m²", "de centro de distribuição em um só projeto"), ("2019", "desde, com ART em todo trabalho")],
         casos=[
             ("Recife/PE", "LAFEPE", "HVAC e utilidades de planta farmacêutica", "Unidades de tratamento de ar, água gelada, gradiente de pressão entre salas, vapor e ar comprimido."),
             ("5.450 m²", "Karne Keijo · Parnamirim/RN", "Centro de distribuição climatizado", "Climatização, renovação de ar, exaustão da cozinha coifa por coifa e GLP."),
-            ("Rio/RJ", "N1MED · Copacabana", "Hamburgueria com cheiro na vizinhança", "Coifa, duto até a cobertura, exaustor e filtro eletrostático."),
+            ("Rio/RJ", "N1MED · Copacabana", "Hamburgueria com cheiro na vizinhança", "Coifa, duto até a cobertura, exaustor e filtro eletrostático. Problema resolvido na origem."),
         ],
         tambem="LD Diagnósticos — ventilação de laboratório, Foz do Iguaçu/PR · AABB Natal — climatização.",
         avaliacoes=[("Matheus Gabriel Souza", "Projetos de engenharia"), ("Pedro Micali", "Projetos"), (None, "Projeto de exaustão ou HVAC")],
         faq_titulo='Dúvidas sobre o <em class="g">projeto de exaustão</em>',
         faq=[
-            ("Vocês atendem a minha cidade?", "Sim. Atendemos todo o Brasil — já são clientes em 15 estados. O levantamento pode ser presencial ou por vistoria assistida por vídeo, e o projeto e a ART são os mesmos."),
-            ("O projeto serve para a vigilância sanitária e para os bombeiros?", "Sim. O projeto sai com memorial de cálculo, desenhos e ART, conforme a NBR 14518 (exaustão de cozinha) e a NBR 16401 (climatização e renovação de ar). Quando há protocolo em órgão, acompanhamos até a aprovação."),
-            ("Vocês vendem ou instalam equipamentos?", "Não. Fazemos o projeto e a ART; o seu instalador executa com as medidas certas, usando a lista de materiais do projeto. Se precisar, indicamos um parceiro."),
-            ("Em quanto tempo fica pronto?", "Depende do tamanho e do número de ambientes. O prazo vem junto com o valor na proposta, em geral no mesmo dia do contato."),
-            ("O que preciso mandar para o orçamento?", "Planta ou croqui, fotos do local, a lista de equipamentos (de cocção, de laboratório ou de produção) e quem está exigindo o projeto."),
+            ("Vocês atendem a minha cidade?", "Sim. Atendemos todo o Brasil, com clientes em 15 estados. O levantamento pode ser presencial ou por vídeo, e o projeto e a ART são os mesmos."),
+            ("O projeto serve para a vigilância sanitária e para os bombeiros?", "Sim. Sai com memorial de cálculo, desenhos e ART, conforme a NBR 14518 (exaustão de cozinha) e a NBR 16401 (climatização e renovação de ar). E seguimos com você até a aprovação."),
+            ("Meu instalador consegue executar o projeto?", "Sim. Ele recebe desenhos detalhados e a lista de materiais pronta para cotar. Se você ainda não tem instalador, indicamos parceiros de confiança."),
+            ("Em quanto tempo fica pronto?", "Depende do tamanho e do número de ambientes. O prazo vem junto com o valor na proposta, que você recebe no mesmo dia."),
+            ("O que preciso mandar para o orçamento?", "Planta ou croqui, fotos do local, a lista de equipamentos e quem está exigindo o projeto. Se não tiver tudo, mande o que tem que a gente orienta."),
             ("Vocês atendem escritórios de engenharia e construtoras?", "Sim. Assumimos a disciplina de HVAC com ART e entregamos em DWG, PDF e Revit, compatibilizado com arquitetura e elétrica."),
         ],
-        fechamento='Mande a planta e diga quem está pedindo o projeto. <em class="g">Respondemos com escopo, valor e prazo.</em>',
+        fechamento='Mande a planta e receba hoje <em class="g">escopo, valor e prazo.</em>',
     ),
     # ------------------------------------------------------------------ NR-35
     dict(
@@ -239,6 +245,41 @@ def nomes(lista):
     return ' <i>·</i> '.join(e(n) for n in lista)
 
 
+def prova_topo(p):
+    """Faixa de prova logo após o topo.
+
+    - prova_topo=dict(titulo, vagas): bloco "Empresas que já confiam" com espaços
+      para preencher (nome em texto ou logo autorizado).
+    - senão: faixa com os nomes de `destaque`.
+    """
+    pt = p.get("prova_topo")
+    if pt:
+        vagas = "\n      ".join(
+            f'<div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa {i}]</div>'
+            for i in range(1, pt["vagas"] + 1))
+        return f'''
+<!-- PROVA SOCIAL NO TOPO: preencher com as empresas escolhidas pelo Matteo -->
+<section class="trust">
+  <div class="wrap">
+    <h2>{pt["titulo"]}</h2>
+    <div class="slots">
+      {vagas}
+    </div>
+    <p class="trust-num"><b>+300 clientes</b> em <b>15 estados</b>, com ART em todo trabalho desde 2019.</p>
+  </div>
+</section>
+'''
+    return f'''
+<!-- Prova acima da dobra: clientes deste serviço logo após o topo -->
+<div class="proofbar">
+  <div class="wrap">
+    <span class="label">{e(p["prova_rotulo"])}</span>
+    <p class="names">{nomes(p["destaque"])} <i>·</i> <span style="color:var(--muted)">e mais de 300 clientes em 15 estados</span></p>
+  </div>
+</div>
+'''
+
+
 def gerar(p):
     secao = 0
 
@@ -311,14 +352,8 @@ def gerar(p):
   </div>
 </section>
 
-<!-- Prova acima da dobra: clientes deste serviço logo após o topo -->
-<div class="proofbar">
-  <div class="wrap">
-    <span class="label">{e(p["prova_rotulo"])}</span>
-    <p class="names">{nomes(p["destaque"])} <i>·</i> <span style="color:var(--muted)">e mais de 300 clientes em 15 estados</span></p>
-  </div>
-</div>
 ''')
+    w(prova_topo(p))
     if p["alerta"]:
         w(f'''
 <!-- CONFIRMAR número e data da portaria antes de publicar -->
@@ -395,7 +430,9 @@ def gerar(p):
     <div class="cta-row">{btn("Pedir valor e prazo")}</div>
   </div>
 </section>
-
+''')
+    if p.get("nao_fazemos"):
+        w(f'''
 <section class="nofaz">
   <div class="wrap">
     <span class="label">O que não fazemos</span>
@@ -427,7 +464,9 @@ def gerar(p):
     <div class="cta-row">{btn("Falar com o engenheiro")}</div>
   </div>
 </section>
-
+''')
+    if p.get("mostrar_clientes", True):
+        w(f'''
 <section class="alt">
   <div class="wrap">
     {rot("Clientes")}

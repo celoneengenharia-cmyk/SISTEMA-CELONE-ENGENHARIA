@@ -30,7 +30,7 @@
  },
  "hasOfferCatalog": {
   "@type": "OfferCatalog",
-  "name": "Projetos mecânicos",
+  "name": "Projetos mecânicos com ART",
   "itemListElement": [
    {
     "@type": "Offer",
@@ -255,6 +255,16 @@ footer a{color:var(--text)}
   .float{width:auto;height:auto;padding:14px 20px;gap:10px;display:flex;align-items:center}
   .float span{display:inline;font-weight:600}
 }
+
+/* Bloco "Empresas que já confiam" logo após o topo */
+.trust{padding:56px 0;background:var(--bg2)}
+.trust h2{font-size:clamp(1.5rem,3.4vw,2.2rem);margin-bottom:28px}
+.slots{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.slot{min-height:92px;display:grid;place-items:center;padding:16px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:400 1.05rem/1.3 var(--f-title);color:var(--title)}
+.slot img{max-height:44px;width:auto;filter:grayscale(1) brightness(1.8);opacity:.85}
+.trust-num{margin-top:24px;color:var(--text)}
+.trust-num b{color:var(--gold);font-weight:600}
+@media (min-width:860px){.slots{grid-template-columns:repeat(4,1fr)}.slot{min-height:110px}}
 </style>
 </head>
 <body>
@@ -278,37 +288,48 @@ footer a{color:var(--text)}
 <main>
 <section class="hero">
   <div class="wrap">
-    <span class="label">Projetos mecânicos</span>
-    <h1>Projeto de exaustão e <em class="g">climatização</em></h1>
-    <p class="lead">Da coifa da cozinha à planta farmacêutica. Calculamos, desenhamos e assinamos o projeto que a vigilância sanitária, os bombeiros e o seu instalador vão usar. <strong>Atendemos todo o Brasil.</strong></p>
+    <span class="label">Projetos mecânicos com ART</span>
+    <h1>Projeto de exaustão e climatização <em class="g">pronto para aprovar</em></h1>
+    <p class="lead">Memorial, desenhos e ART na mão para a vigilância sanitária e os bombeiros. Seu instalador recebe tudo pronto para cotar e executar. <strong>Cozinhas, laboratórios, indústrias e farmacêuticas em todo o Brasil.</strong></p>
     <div class="cta-row">
-      <a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir proposta do projeto</a>
-      <p class="note">Escopo, valor e prazo no mesmo dia, pelo WhatsApp. Não vendemos nem instalamos equipamentos: fazemos o projeto e a ART.</p>
+      <a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Receber proposta hoje</a>
+      <p class="note">Escopo, valor e prazo no mesmo dia, direto com o engenheiro, pelo WhatsApp.</p>
     </div>
     <div class="facts">
-      <div><span>Responsável técnico</span><p>Eng. Matteo Celone · CREA 2118861648</p></div><div><span>Entrega</span><p>Memorial, desenhos e ART</p></div><div><span>Atendimento</span><p>Todo o Brasil, desde 2019</p></div>
+      <div><span>Responsável técnico</span><p>Eng. Matteo Celone · CREA 2118861648</p></div><div><span>Entrega</span><p>Memorial, desenhos (DWG, PDF, Revit) e ART</p></div><div><span>Proposta</span><p>No mesmo dia · todo o Brasil</p></div>
     </div>
   </div>
 </section>
 
-<!-- Prova acima da dobra: clientes deste serviço logo após o topo -->
-<div class="proofbar">
+
+<!-- PROVA SOCIAL NO TOPO: preencher com as empresas escolhidas pelo Matteo -->
+<section class="trust">
   <div class="wrap">
-    <span class="label">Projetos de HVAC para</span>
-    <p class="names">LAFEPE <i>·</i> Karne Keijo <i>·</i> N1MED <i>·</i> LD Diagnósticos <i>·</i> AABB Natal <i>·</i> Sesc <i>·</i> <span style="color:var(--muted)">e mais de 300 clientes em 15 estados</span></p>
+    <h2>Empresas que já confiam na <em class="g">Celone Engenharia</em></h2>
+    <div class="slots">
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 1]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 2]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 3]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 4]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 5]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 6]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 7]</div>
+      <div class="slot"><!-- trocar pelo nome ou <img> do logo autorizado -->[Empresa 8]</div>
+    </div>
+    <p class="trust-num"><b>+300 clientes</b> em <b>15 estados</b>, com ART em todo trabalho desde 2019.</p>
   </div>
-</div>
+</section>
 
 <section>
   <div class="wrap">
     <span class="label">1 · Quando você precisa</span>
-    <h2>Quando você precisa do <em class="g">projeto de exaustão</em></h2>
+    <h2>Prazo para aprovar? <em class="g">A gente resolve.</em></h2>
     <div class="rows">
-      <div><span class="k">Vigilância sanitária</span><p class="v">Pediu o projeto de exaustão da cozinha ou a ventilação do laboratório.</p></div>
-      <div><span class="k">Bombeiros</span><p class="v">O projeto de incêndio exige exaustão ou ventilação de antecâmara.</p></div>
-      <div><span class="k">Obra ou reforma</span><p class="v">A climatização precisa ser compatibilizada com arquitetura e elétrica.</p></div>
-      <div><span class="k">Calor, fumo e cheiro</span><p class="v">O ambiente esquenta, junta fumo, gordura ou cheiro — inclusive com o vizinho reclamando.</p></div>
-      <div><span class="k">Escritórios e construtoras</span><p class="v">Você quer terceirizar a disciplina de HVAC com quem assina.</p></div>
+      <div><span class="k">Vigilância sanitária</span><p class="v">Pediu o projeto de exaustão da cozinha ou a ventilação do laboratório. Entregamos pronto para protocolar.</p></div>
+      <div><span class="k">Bombeiros</span><p class="v">O projeto de incêndio travou na exaustão ou na ventilação da antecâmara. Dimensionamos e assinamos.</p></div>
+      <div><span class="k">Obra ou reforma</span><p class="v">A climatização precisa fechar com a arquitetura e a elétrica antes da obra começar.</p></div>
+      <div><span class="k">Calor, fumaça e cheiro</span><p class="v">Cozinha quente, gordura no ar ou vizinho reclamando do cheiro. Resolvemos na origem.</p></div>
+      <div><span class="k">Escritórios e construtoras</span><p class="v">Terceirize a disciplina de HVAC com quem calcula, desenha e assina.</p></div>
     </div>
   </div>
 </section>
@@ -316,37 +337,37 @@ footer a{color:var(--text)}
 <section class="alt">
   <div class="wrap">
     <span class="label">2 · O que fazemos</span>
-    <h2>Exaustão, ventilação e <em class="g">climatização</em> com ART</h2>
+    <h2>Exaustão, ventilação e climatização <em class="g">num só projeto</em></h2>
     <div class="blocks">
       <div class="block">
         <div class="ph" role="img" aria-label=""></div>
         <div>
           <h3>Exaustão de cozinha</h3>
-          <p>Coifa dimensionada por equipamento de cocção, dutos, exaustor, filtro e caixa de ventilação, conforme a NBR 14518.</p>
-          <ul class="dash"><li>Restaurantes, hamburguerias e refeitórios</li><li>Filtro eletrostático para cheiro e gordura</li><li>Ar de reposição</li></ul>
+          <p>Coifa dimensionada para cada equipamento, dutos, exaustor e filtro, conforme a NBR 14518. Sem fumaça no salão e sem reclamação do vizinho.</p>
+          <ul class="dash"><li>Restaurantes, hamburguerias e refeitórios</li><li>Filtro eletrostático contra cheiro e gordura</li><li>Ar de reposição dimensionado</li></ul>
         </div>
       </div>
       <div class="block">
         <div class="ph" role="img" aria-label=""></div>
         <div>
           <h3>Ventilação e antecâmara</h3>
-          <p>Vazões, renovação de ar e exaustão mecânica por ramal.</p>
-          <ul class="dash"><li>Antecâmara do projeto de incêndio</li><li>Laboratórios, sanitários e DML</li><li>Casa de máquinas e exaustão de solda</li></ul>
+          <p>Vazões e renovação de ar calculadas ambiente por ambiente, prontas para o projeto de incêndio.</p>
+          <ul class="dash"><li>Antecâmara exigida pelos bombeiros</li><li>Laboratórios, sanitários e DML</li><li>Casa de máquinas e exaustão de solda</li></ul>
         </div>
       </div>
       <div class="block">
         <div class="ph" role="img" aria-label=""></div>
         <div>
           <h3>Climatização e HVAC</h3>
-          <p>Carga térmica por ambiente, escolha da tecnologia, dutos, tubulações e drenos.</p>
-          <ul class="dash"><li>Split, cassete, VRF e água gelada</li><li>Renovação e qualidade do ar (NBR 16401)</li><li>Gradiente de pressão entre salas</li></ul>
+          <p>Carga térmica por ambiente e a tecnologia certa para o seu uso, com dutos, tubulações e drenos.</p>
+          <ul class="dash"><li>Split, cassete, VRF e água gelada</li><li>Qualidade do ar conforme a NBR 16401</li><li>Gradiente de pressão entre salas</li></ul>
         </div>
       </div>
       <div class="block">
         <div class="ph" role="img" aria-label=""></div>
         <div>
           <h3>Vapor e ar comprimido</h3>
-          <p>Redes de utilidades projetadas junto do HVAC, compatibilizadas no entreforro.</p>
+          <p>Redes de utilidades projetadas junto com o HVAC e compatibilizadas no entreforro.</p>
           <ul class="dash"><li>Troncais, ramais e pontos por sala</li><li>Ar em contato com o produto (ISO 8573-1)</li><li>Interface com a NR-13</li></ul>
         </div>
       </div>
@@ -357,17 +378,17 @@ footer a{color:var(--text)}
 <section>
   <div class="wrap">
     <span class="label">3 · O que você recebe</span>
-    <h2>O que vem no <em class="g">projeto de exaustão e climatização</em></h2>
+    <h2>Tudo o que você recebe, <em class="g">pronto para protocolar</em></h2>
     <div style="overflow-x:auto">
     <table class="table">
       <thead><tr><th>Documento</th><th>O que contém</th><th>Formato</th></tr></thead>
       <tbody>
         <tr><td>Memorial de cálculo</td><td>Vazões, carga térmica, perdas de carga e dimensionamento</td><td>PDF assinado</td></tr>
-        <tr><td>Memorial descritivo</td><td>Especificação do sistema e dos equipamentos</td><td>PDF · DOCX</td></tr>
+        <tr><td>Memorial descritivo</td><td>Especificação completa do sistema e dos equipamentos</td><td>PDF · DOCX</td></tr>
         <tr><td>Desenhos</td><td>Planta, cortes, isométricos e detalhes</td><td>PDF · DWG · Revit</td></tr>
-        <tr><td>Lista de materiais</td><td>Para o seu instalador cotar</td><td>PDF · XLSX</td></tr>
-        <tr><td>ART</td><td>Anotação de responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
-        <tr><td>Acompanhamento</td><td>Quando há protocolo em órgão, acompanhamos até a aprovação</td><td>—</td></tr>
+        <tr><td>Lista de materiais</td><td>Seu instalador cota e compra sem retrabalho</td><td>PDF · XLSX</td></tr>
+        <tr><td>ART</td><td>Responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
+        <tr><td>Acompanhamento</td><td>Seguimos com você até a aprovação no órgão</td><td>—</td></tr>
       </tbody>
     </table>
     </div>
@@ -377,22 +398,15 @@ footer a{color:var(--text)}
 <section class="alt">
   <div class="wrap">
     <span class="label">4 · Como funciona</span>
-    <h2>Como funciona o <em class="g">projeto de climatização</em></h2>
-    <p class="lead">Você não precisa esperar visita: o levantamento pode ser por vídeo, com as medidas guiadas pela nossa equipe.</p>
+    <h2>Do primeiro contato à <em class="g">aprovação</em>, em 4 passos</h2>
+    <p class="lead">Sem esperar visita: o levantamento pode ser feito por vídeo, com a nossa equipe guiando cada medida.</p>
     <ol class="steps">
-      <li><div><b>Você manda o que tem</b>Planta ou croqui, fotos, lista de equipamentos e quem está exigindo o projeto.</div></li>
-      <li><div><b>Respondemos com escopo, valor e prazo</b>Em geral no mesmo dia, pelo WhatsApp.</div></li>
-      <li><div><b>Levantamento por visita ou vídeo</b>Na vistoria assistida, orientamos por vídeo o que fotografar e medir. O projeto e a ART são os mesmos.</div></li>
-      <li><div><b>Entrega com ART</b>E acompanhamento até a aprovação na vigilância ou nos bombeiros.</div></li>
+      <li><div><b>Mande o que você tem</b>Planta ou croqui, fotos, lista de equipamentos e quem está exigindo o projeto.</div></li>
+      <li><div><b>Receba a proposta no mesmo dia</b>Escopo, valor e prazo, direto no WhatsApp.</div></li>
+      <li><div><b>Levantamento presencial ou por vídeo</b>Orientamos o que fotografar e medir. O projeto e a ART são os mesmos.</div></li>
+      <li><div><b>Projeto entregue com ART</b>E seguimos com você até a aprovação na vigilância ou nos bombeiros.</div></li>
     </ol>
     <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir valor e prazo</a></div>
-  </div>
-</section>
-
-<section class="nofaz">
-  <div class="wrap">
-    <span class="label">O que não fazemos</span>
-    <p>Não vendemos nem instalamos equipamentos. Fazemos o projeto e a ART; o seu instalador executa com as medidas certas. Se precisar, indicamos um parceiro.</p>
   </div>
 </section>
 
@@ -417,7 +431,7 @@ footer a{color:var(--text)}
       </article>
       <article class="case">
         <div class="big txt">Rio/RJ</div>
-        <div><p class="who">N1MED · Copacabana</p><h3>Hamburgueria com cheiro na vizinhança</h3><p>Coifa, duto até a cobertura, exaustor e filtro eletrostático.</p></div>
+        <div><p class="who">N1MED · Copacabana</p><h3>Hamburgueria com cheiro na vizinhança</h3><p>Coifa, duto até a cobertura, exaustor e filtro eletrostático. Problema resolvido na origem.</p></div>
       </article>
     </div>
     <p class="also"><strong>Também:</strong> LD Diagnósticos — ventilação de laboratório, Foz do Iguaçu/PR · AABB Natal — climatização.</p>
@@ -425,21 +439,11 @@ footer a{color:var(--text)}
   </div>
 </section>
 
-<section class="alt">
-  <div class="wrap">
-    <span class="label">6 · Clientes</span>
-    <h2>Empresas que <em class="g">confiam</em> na Celone</h2>
-    <p class="clients-hi">LAFEPE <i>·</i> Karne Keijo <i>·</i> N1MED <i>·</i> LD Diagnósticos <i>·</i> AABB Natal <i>·</i> Sesc</p>
-    <p class="clients-all">Ambev <i>·</i> Três Corações <i>·</i> ArcelorMittal Pecém <i>·</i> Aunde <i>·</i> Acotubo <i>·</i> AXIA Energia <i>·</i> BBTS <i>·</i> CCCC <i>·</i> Ecovias <i>·</i> EPAV <i>·</i> Gree <i>·</i> J&amp;T Express <i>·</i> PROK Brasil <i>·</i> Supernosso <i>·</i> UTC Óleo e Gás <i>·</i> Enaex <i>·</i> CREMESP <i>·</i> Prefeitura de Pinhais <i>·</i> Prefeitura de Mossoró</p>
-    <p class="clients-tag"><b>Mais de 300 clientes em 15 estados</b>, desde 2019.</p>
-  </div>
-</section>
-
 <!-- AVALIAÇÕES: só avaliações reais do Google, texto copiado sem reescrever, com nome e serviço.
      Remover a classe "todo" ao preencher. Se não houver ao menos 3, ocultar a seção. -->
 <section>
   <div class="wrap">
-    <span class="label">7 · Avaliações</span>
+    <span class="label">6 · Avaliações</span>
     <h2>O que dizem os <em class="g">clientes</em></h2>
     <div class="reviews">
       <figure class="review todo"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>[Colar o texto real da avaliação do Google, sem reescrever]</blockquote><cite><b>Matheus Gabriel Souza</b> · Projetos de engenharia</cite></figure>
@@ -454,7 +458,7 @@ footer a{color:var(--text)}
   <div class="wrap rt">
     <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
     <div>
-      <span class="label">8 · Responsável técnico</span>
+      <span class="label">7 · Responsável técnico</span>
       <h2>Quem assina o seu <em class="g">projeto</em></h2>
       <p>Engenheiro mecânico formado pela UFRN e pela Politecnico di Torino (Itália), mestre pela UFRN e com especialização em análise de dados e gestão de projetos pela USP. Foi gestor de projetos industriais na Nestlé Brasil e atuou na Petrobras e na Brava Energia. Mais do que documentos, entrega clareza, segurança e respaldo técnico.</p>
       <div class="creds">
@@ -469,14 +473,14 @@ footer a{color:var(--text)}
 
 <section>
   <div class="wrap">
-    <span class="label">9 · Perguntas frequentes</span>
+    <span class="label">8 · Perguntas frequentes</span>
     <h2>Dúvidas sobre o <em class="g">projeto de exaustão</em></h2>
     <div class="faq">
-      <details><summary>Vocês atendem a minha cidade?</summary><p>Sim. Atendemos todo o Brasil — já são clientes em 15 estados. O levantamento pode ser presencial ou por vistoria assistida por vídeo, e o projeto e a ART são os mesmos.</p></details>
-      <details><summary>O projeto serve para a vigilância sanitária e para os bombeiros?</summary><p>Sim. O projeto sai com memorial de cálculo, desenhos e ART, conforme a NBR 14518 (exaustão de cozinha) e a NBR 16401 (climatização e renovação de ar). Quando há protocolo em órgão, acompanhamos até a aprovação.</p></details>
-      <details><summary>Vocês vendem ou instalam equipamentos?</summary><p>Não. Fazemos o projeto e a ART; o seu instalador executa com as medidas certas, usando a lista de materiais do projeto. Se precisar, indicamos um parceiro.</p></details>
-      <details><summary>Em quanto tempo fica pronto?</summary><p>Depende do tamanho e do número de ambientes. O prazo vem junto com o valor na proposta, em geral no mesmo dia do contato.</p></details>
-      <details><summary>O que preciso mandar para o orçamento?</summary><p>Planta ou croqui, fotos do local, a lista de equipamentos (de cocção, de laboratório ou de produção) e quem está exigindo o projeto.</p></details>
+      <details><summary>Vocês atendem a minha cidade?</summary><p>Sim. Atendemos todo o Brasil, com clientes em 15 estados. O levantamento pode ser presencial ou por vídeo, e o projeto e a ART são os mesmos.</p></details>
+      <details><summary>O projeto serve para a vigilância sanitária e para os bombeiros?</summary><p>Sim. Sai com memorial de cálculo, desenhos e ART, conforme a NBR 14518 (exaustão de cozinha) e a NBR 16401 (climatização e renovação de ar). E seguimos com você até a aprovação.</p></details>
+      <details><summary>Meu instalador consegue executar o projeto?</summary><p>Sim. Ele recebe desenhos detalhados e a lista de materiais pronta para cotar. Se você ainda não tem instalador, indicamos parceiros de confiança.</p></details>
+      <details><summary>Em quanto tempo fica pronto?</summary><p>Depende do tamanho e do número de ambientes. O prazo vem junto com o valor na proposta, que você recebe no mesmo dia.</p></details>
+      <details><summary>O que preciso mandar para o orçamento?</summary><p>Planta ou croqui, fotos do local, a lista de equipamentos e quem está exigindo o projeto. Se não tiver tudo, mande o que tem que a gente orienta.</p></details>
       <details><summary>Vocês atendem escritórios de engenharia e construtoras?</summary><p>Sim. Assumimos a disciplina de HVAC com ART e entregamos em DWG, PDF e Revit, compatibilizado com arquitetura e elétrica.</p></details>
     </div>
   </div>
@@ -485,7 +489,7 @@ footer a{color:var(--text)}
 <section class="close">
   <div class="wrap">
     <span class="label">Peça sua proposta</span>
-    <h2>Mande a planta e diga quem está pedindo o projeto. <em class="g">Respondemos com escopo, valor e prazo.</em></h2>
+    <h2>Mande a planta e receba hoje <em class="g">escopo, valor e prazo.</em></h2>
     <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Falar com o engenheiro</a></div>
   </div>
 </section>

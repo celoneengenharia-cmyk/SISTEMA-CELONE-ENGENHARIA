@@ -347,7 +347,7 @@ def gerar(p):
 <link rel="canonical" href="https://celoneengenharia.com/{p["pasta"]}/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Manrope:wght@400;600&family=Space+Grotesk:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <!-- Gerado por landing-pages/gerar.py. Imagens: trocar os gradientes de .hero, .ph e .close por WebP (topo 16:9 / 4:5, serviços 3:2, fechamento 21:9), até 200 KB. -->
 <script type="application/ld+json">
 {json.dumps(ld, ensure_ascii=False, indent=1)}

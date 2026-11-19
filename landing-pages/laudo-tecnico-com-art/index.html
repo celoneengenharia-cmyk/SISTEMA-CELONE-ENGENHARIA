@@ -296,6 +296,17 @@ footer a{color:var(--text)}
   .logos{grid-template-columns:repeat(6,1fr)}
   .case{grid-template-columns:220px 1fr 300px}
 }
+
+/* Ícones na tabela de entregáveis e nos passos */
+.td-ico{display:flex;align-items:center;gap:12px}
+.td-ico .ico,.steps b .ico{width:24px;height:24px;margin:0;flex:none}
+.steps b{display:flex!important;align-items:center;gap:10px}
+@media (max-width:859px){
+  .table thead{display:none}
+  .table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .table td{display:block;border:0;padding:3px 0 3px 36px}
+  .table td:first-child{padding-left:0}
+}
 </style>
 </head>
 <body>
@@ -382,10 +393,10 @@ footer a{color:var(--text)}
     <table class="table">
       <thead><tr><th>Documento</th><th>O que contém</th><th>Formato</th></tr></thead>
       <tbody>
-        <tr><td>Laudo técnico</td><td>Análise, registro fotográfico e parecer assinado por engenheiro mecânico</td><td>PDF assinado</td></tr>
-        <tr><td>Laudo de queima</td><td>Nexo técnico do dano elétrico para a concessionária</td><td>PDF assinado</td></tr>
-        <tr><td>ART</td><td>Anotação de responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
-        <tr><td>Responsável técnico</td><td>Contrato anual, ART de cargo e função e requerimento no CREA</td><td>Contrato · PDF</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg>Laudo técnico</span></td><td>Análise, registro fotográfico e parecer assinado por engenheiro mecânico</td><td>PDF assinado</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg>Laudo de queima</span></td><td>Nexo técnico do dano elétrico para a concessionária</td><td>PDF assinado</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>ART</span></td><td>Anotação de responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>Responsável técnico</span></td><td>Contrato anual, ART de cargo e função e requerimento no CREA</td><td>Contrato · PDF</td></tr>
       </tbody>
     </table>
     </div>
@@ -398,10 +409,10 @@ footer a{color:var(--text)}
     <h2>Como funciona o <em class="g">laudo técnico com ART</em></h2>
     <p class="lead">Com prazo de licitação, diga a data já na primeira mensagem.</p>
     <ol class="steps">
-      <li><div><b>Diga o que precisa e quem exige</b>Licitação, banco, seguradora, concessionária ou CREA.</div></li>
-      <li><div><b>Mandamos valor e prazo no mesmo dia</b>Preço fechado antes de começar.</div></li>
-      <li><div><b>Vistoria assistida por vídeo ou visita</b>Na maioria dos casos, não precisa de visita presencial.</div></li>
-      <li><div><b>Laudo com ART entregue</b>Em geral em poucos dias. Pagamento por PIX ou boleto.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11l-8.5 8.5a5 5 0 0 1-7-7L13 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L14 7"/></svg>Diga o que precisa e quem exige</b>Licitação, banco, seguradora, concessionária ou CREA.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg>Mandamos valor e prazo no mesmo dia</b>Preço fechado antes de começar.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 11l5-3v8l-5-3"/></svg>Vistoria assistida por vídeo ou visita</b>Na maioria dos casos, não precisa de visita presencial.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Laudo com ART entregue</b>Em geral em poucos dias. Pagamento por PIX ou boleto.</div></li>
     </ol>
     <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir valor e prazo</a></div>
   </div>

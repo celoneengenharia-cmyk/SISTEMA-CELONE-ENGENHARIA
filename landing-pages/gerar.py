@@ -244,7 +244,30 @@ ICONES = {
     "obra": '<path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/>',
     "ar": '<path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 15h15a3 3 0 1 1-3 3"/><path d="M3 12h7"/>',
     "camadas": '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+    "calc": '<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M8 7h8"/><path d="M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01M16 18h.01"/>',
+    "texto": '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/>',
+    "desenho": '<rect x="3" y="4" width="18" height="16"/><path d="M3 10h8v10M11 14h10"/>',
+    "lista": '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/>',
+    "selo": '<circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/>',
+    "aprova": '<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',
+    "clipe": '<path d="M20 11l-8.5 8.5a5 5 0 0 1-7-7L13 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L14 7"/>',
+    "chat": '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/>',
+    "video": '<rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 11l5-3v8l-5-3"/>',
 }
+
+# Ícone de cada entregável, pela palavra-chave do nome
+ICONE_ENTREGA = [("cálculo", "calc"), ("descritivo", "texto"), ("desenho", "desenho"), ("lista", "lista"),
+                 ("art", "selo"), ("responsável", "selo"), ("acompanhamento", "aprova"), ("laudo", "texto")]
+# Ícone dos 4 passos de "Como funciona"
+ICONE_PASSOS = ["clipe", "chat", "video", "aprova"]
+
+
+def icone_entrega(nome):
+    n = nome.lower()
+    for chave, ic in ICONE_ENTREGA:
+        if (n == chave) if chave == "art" else (chave in n):
+            return ic
+    return "texto"
 
 
 def icone(nome):
@@ -444,7 +467,7 @@ def gerar(p):
 ''')
 
     linhas = "\n        ".join(
-        f'<tr{" class=\"opt\"" if opt else ""}><td>{e(d)}</td><td>{e(c)}</td><td>{e(f)}</td></tr>' for d, c, f, opt in p["recebe"])
+        f'<tr{" class=\"opt\"" if opt else ""}><td><span class="td-ico">{icone(icone_entrega(d))}{e(d)}</span></td><td>{e(c)}</td><td>{e(f)}</td></tr>' for d, c, f, opt in p["recebe"])
     w(f'''
 <section>
   <div class="wrap">
@@ -462,7 +485,7 @@ def gerar(p):
 </section>
 ''')
 
-    passos = "\n      ".join(f"<li><div><b>{e(t)}</b>{e(d)}</div></li>" for t, d in p["passos"])
+    passos = "\n      ".join(f"<li><div><b>{icone(ICONE_PASSOS[i % 4])}{e(t)}</b>{e(d)}</div></li>" for i, (t, d) in enumerate(p["passos"]))
     w(f'''
 <section class="alt">
   <div class="wrap">

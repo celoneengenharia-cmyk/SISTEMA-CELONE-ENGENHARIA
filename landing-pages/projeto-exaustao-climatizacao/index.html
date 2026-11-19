@@ -303,6 +303,17 @@ footer a{color:var(--text)}
   .logos{grid-template-columns:repeat(6,1fr)}
   .case{grid-template-columns:220px 1fr 300px}
 }
+
+/* Ícones na tabela de entregáveis e nos passos */
+.td-ico{display:flex;align-items:center;gap:12px}
+.td-ico .ico,.steps b .ico{width:24px;height:24px;margin:0;flex:none}
+.steps b{display:flex!important;align-items:center;gap:10px}
+@media (max-width:859px){
+  .table thead{display:none}
+  .table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .table td{display:block;border:0;padding:3px 0 3px 36px}
+  .table td:first-child{padding-left:0}
+}
 </style>
 </head>
 <body>
@@ -443,12 +454,12 @@ footer a{color:var(--text)}
     <table class="table">
       <thead><tr><th>Documento</th><th>O que contém</th><th>Formato</th></tr></thead>
       <tbody>
-        <tr><td>Memorial de cálculo</td><td>Vazões, carga térmica, perdas de carga e dimensionamento</td><td>PDF assinado</td></tr>
-        <tr><td>Memorial descritivo</td><td>Especificação completa do sistema e dos equipamentos</td><td>PDF · DOCX</td></tr>
-        <tr><td>Desenhos</td><td>Planta, cortes, isométricos e detalhes</td><td>PDF · DWG · Revit</td></tr>
-        <tr><td>Lista de materiais</td><td>Seu instalador cota e compra sem retrabalho</td><td>PDF · XLSX</td></tr>
-        <tr><td>ART</td><td>Responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
-        <tr><td>Acompanhamento</td><td>Seguimos com você até a aprovação no órgão</td><td>—</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M8 7h8"/><path d="M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>Memorial de cálculo</span></td><td>Vazões, carga térmica, perdas de carga e dimensionamento</td><td>PDF assinado</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg>Memorial descritivo</span></td><td>Especificação completa do sistema e dos equipamentos</td><td>PDF · DOCX</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16"/><path d="M3 10h8v10M11 14h10"/></svg>Desenhos</span></td><td>Planta, cortes, isométricos e detalhes</td><td>PDF · DWG · Revit</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>Lista de materiais</span></td><td>Seu instalador cota e compra sem retrabalho</td><td>PDF · XLSX</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>ART</span></td><td>Responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Acompanhamento</span></td><td>Seguimos com você até a aprovação no órgão</td><td>—</td></tr>
       </tbody>
     </table>
     </div>
@@ -461,10 +472,10 @@ footer a{color:var(--text)}
     <h2>Do primeiro contato à <em class="g">aprovação</em>, em 4 passos</h2>
     <p class="lead">Sem esperar visita: o levantamento pode ser feito por vídeo, com a nossa equipe guiando cada medida.</p>
     <ol class="steps">
-      <li><div><b>Mande o que você tem</b>Planta ou croqui, fotos, lista de equipamentos e quem está exigindo o projeto.</div></li>
-      <li><div><b>Receba a proposta no mesmo dia</b>Escopo, valor e prazo, direto no WhatsApp.</div></li>
-      <li><div><b>Levantamento presencial ou por vídeo</b>Orientamos o que fotografar e medir. O projeto e a ART são os mesmos.</div></li>
-      <li><div><b>Projeto entregue com ART</b>E seguimos com você até a aprovação na vigilância ou nos bombeiros.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11l-8.5 8.5a5 5 0 0 1-7-7L13 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L14 7"/></svg>Mande o que você tem</b>Planta ou croqui, fotos, lista de equipamentos e quem está exigindo o projeto.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg>Receba a proposta no mesmo dia</b>Escopo, valor e prazo, direto no WhatsApp.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 11l5-3v8l-5-3"/></svg>Levantamento presencial ou por vídeo</b>Orientamos o que fotografar e medir. O projeto e a ART são os mesmos.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Projeto entregue com ART</b>E seguimos com você até a aprovação na vigilância ou nos bombeiros.</div></li>
     </ol>
     <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir valor e prazo</a></div>
   </div>

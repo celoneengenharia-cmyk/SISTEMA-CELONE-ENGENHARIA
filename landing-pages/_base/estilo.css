@@ -236,3 +236,14 @@ footer a{color:var(--text)}
   .logos{grid-template-columns:repeat(6,1fr)}
   .case{grid-template-columns:220px 1fr 300px}
 }
+
+/* Ícones na tabela de entregáveis e nos passos */
+.td-ico{display:flex;align-items:center;gap:12px}
+.td-ico .ico,.steps b .ico{width:24px;height:24px;margin:0;flex:none}
+.steps b{display:flex!important;align-items:center;gap:10px}
+@media (max-width:859px){
+  .table thead{display:none}
+  .table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .table td{display:block;border:0;padding:3px 0 3px 36px}
+  .table td:first-child{padding-left:0}
+}

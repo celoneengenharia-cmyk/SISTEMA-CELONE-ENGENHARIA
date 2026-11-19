@@ -303,6 +303,17 @@ footer a{color:var(--text)}
   .logos{grid-template-columns:repeat(6,1fr)}
   .case{grid-template-columns:220px 1fr 300px}
 }
+
+/* Ícones na tabela de entregáveis e nos passos */
+.td-ico{display:flex;align-items:center;gap:12px}
+.td-ico .ico,.steps b .ico{width:24px;height:24px;margin:0;flex:none}
+.steps b{display:flex!important;align-items:center;gap:10px}
+@media (max-width:859px){
+  .table thead{display:none}
+  .table tr{display:block;padding:16px 0;border-bottom:1px solid var(--line)}
+  .table td{display:block;border:0;padding:3px 0 3px 36px}
+  .table td:first-child{padding-left:0}
+}
 </style>
 </head>
 <body>
@@ -413,10 +424,10 @@ footer a{color:var(--text)}
     <table class="table">
       <thead><tr><th>Documento</th><th>O que contém</th><th>Formato</th></tr></thead>
       <tbody>
-        <tr><td>Memorial de cálculo</td><td>Da linha de vida e da estrutura onde ela é fixada</td><td>PDF assinado</td></tr>
-        <tr><td>Desenhos e especificação</td><td>Componentes e detalhes para o instalador</td><td>PDF · DWG</td></tr>
-        <tr><td>Laudo</td><td>Inspeção com registro fotográfico, parecer e data da próxima inspeção</td><td>PDF</td></tr>
-        <tr><td>ART</td><td>Anotação de responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M8 7h8"/><path d="M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>Memorial de cálculo</span></td><td>Da linha de vida e da estrutura onde ela é fixada</td><td>PDF assinado</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16"/><path d="M3 10h8v10M11 14h10"/></svg>Desenhos e especificação</span></td><td>Componentes e detalhes para o instalador</td><td>PDF · DWG</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg>Laudo</span></td><td>Inspeção com registro fotográfico, parecer e data da próxima inspeção</td><td>PDF</td></tr>
+        <tr><td><span class="td-ico"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg>ART</span></td><td>Anotação de responsabilidade técnica recolhida no CREA</td><td>PDF</td></tr>
       </tbody>
     </table>
     </div>
@@ -429,10 +440,10 @@ footer a{color:var(--text)}
     <h2>Como funciona o <em class="g">projeto de linha de vida</em></h2>
     <p class="lead">Na maioria dos casos, não precisa de visita: a vistoria assistida tem fotos e medidas guiadas pela nossa equipe.</p>
     <ol class="steps">
-      <li><div><b>Você diz onde é</b>Telhado, galpão, caminhão ou fachada; o comprimento ou quantas escadas são; e o que motivou o pedido.</div></li>
-      <li><div><b>Mandamos valor e prazo no mesmo dia</b>Proposta pelo WhatsApp, com pacote quando são várias escadas.</div></li>
-      <li><div><b>Vistoria presencial ou assistida</b>Orientamos por vídeo o que fotografar e medir. O laudo e a ART são os mesmos.</div></li>
-      <li><div><b>Entregamos projeto ou laudo com ART</b>Pronto para a fiscalização e para o instalador.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11l-8.5 8.5a5 5 0 0 1-7-7L13 4a3.5 3.5 0 0 1 5 5l-8.5 8.5a2 2 0 0 1-3-3L14 7"/></svg>Você diz onde é</b>Telhado, galpão, caminhão ou fachada; o comprimento ou quantas escadas são; e o que motivou o pedido.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg>Mandamos valor e prazo no mesmo dia</b>Proposta pelo WhatsApp, com pacote quando são várias escadas.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 11l5-3v8l-5-3"/></svg>Vistoria presencial ou assistida</b>Orientamos por vídeo o que fotografar e medir. O laudo e a ART são os mesmos.</div></li>
+      <li><div><b><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Entregamos projeto ou laudo com ART</b>Pronto para a fiscalização e para o instalador.</div></li>
     </ol>
     <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir valor e prazo</a></div>
   </div>

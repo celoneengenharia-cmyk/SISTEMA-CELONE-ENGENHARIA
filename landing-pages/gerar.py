@@ -46,7 +46,7 @@ PAGINAS = [
         titulo='Projeto de exaustão e climatização <em class="g">pronto para aprovar</em>',
         sub="Memorial, desenhos e ART na mão para aprovar na vigilância sanitária e nos bombeiros. Seu instalador recebe tudo pronto para cotar e executar. <strong>Atendemos empresas em todo o Brasil.</strong>",
         btn="Receber proposta hoje",
-        nota="Escopo, valor e prazo no mesmo dia, direto com o engenheiro, pelo WhatsApp.",
+        nota="Escopo, valor e prazo no mesmo dia, pelo WhatsApp.",
         faixa=[("Responsável técnico", "Eng. Matteo Celone · CREA 2118861648"), ("Entrega", "Memorial, desenhos (DWG, PDF, Revit) e ART"), ("Proposta", "No mesmo dia · todo o Brasil")],
         # Bloco "Empresas que já confiam" logo após o topo, com espaços para preencher
         prova_topo=dict(
@@ -60,11 +60,11 @@ PAGINAS = [
         alerta=None,
         quando_titulo='Prazo para aprovar? <em class="g">A gente resolve.</em>',
         quando=[
-            ("Vigilância sanitária", "Pediu o projeto de exaustão ou ventilação. Entregamos pronto para protocolar."),
-            ("Bombeiros", "O projeto de incêndio travou na exaustão ou na ventilação da antecâmara. Dimensionamos e assinamos."),
-            ("Obra ou reforma", "A climatização precisa fechar com a arquitetura e a elétrica antes da obra começar."),
-            ("Conforto e qualidade do ar", "Ambiente quente, ar parado, fumaça ou cheiro incomodando a equipe ou os vizinhos. Resolvemos na origem."),
-            ("Escritórios e construtoras", "Terceirize a disciplina de HVAC com quem calcula, desenha e assina."),
+            ("Vigilância sanitária", "Pediu o projeto de exaustão ou ventilação. Entregamos pronto para protocolar.", "doc"),
+            ("Bombeiros", "O projeto de incêndio travou na exaustão ou na ventilação da antecâmara. Dimensionamos e assinamos.", "fogo"),
+            ("Obra ou reforma", "A climatização precisa fechar com a arquitetura e a elétrica antes da obra começar.", "obra"),
+            ("Conforto e qualidade do ar", "Ambiente quente, ar parado, fumaça ou cheiro incomodando a equipe ou os vizinhos. Resolvemos na origem.", "ar"),
+            ("Escritórios e construtoras", "Terceirize a disciplina de HVAC com quem calcula, desenha e assina.", "camadas"),
         ],
         fazemos_titulo='Exaustão, ventilação e climatização <em class="g">num só projeto</em>',
         blocos=[
@@ -238,6 +238,19 @@ PAGINAS = [
 ]
 
 
+ICONES = {
+    "doc": '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 14l2 2 4-4"/>',
+    "fogo": '<path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-5 3-6 0 2 1 3 2 3 0-3 0-6 1-8z"/>',
+    "obra": '<path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/>',
+    "ar": '<path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 15h15a3 3 0 1 1-3 3"/><path d="M3 12h7"/>',
+    "camadas": '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+}
+
+
+def icone(nome):
+    return f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONES[nome]}</svg>'
+
+
 def btn(texto):
     return f'<a class="btn js-zap" href="{ZAP}"><svg><use href="#wa"/></svg>{texto}</a>'
 
@@ -290,15 +303,8 @@ def gerar(p):
         return f'<span class="label">{secao} · {nome}</span>'
 
     def rt():
-        cv = [
-            ("Politecnico di Torino", "Engenharia mecânica na Itália"),
-            ("UFRN", "Engenheiro mecânico e mestre"),
-            ("USP", "Especialização em análise de dados e gestão de projetos"),
-            ("Nestlé Brasil", "Gestor de projetos industriais"),
-            ("Petrobras · Brava Energia", "Atuação em óleo e gás"),
-            ("CREA 2118861648", "ART em todo projeto"),
-        ]
-        itens = "\n        ".join(f"<div><b>{e(t)}</b><span>{e(d)}</span></div>" for t, d in cv)
+        marcas = ["Politecnico di Torino", "UFRN", "USP", "Nestlé Brasil", "Petrobras", "Brava Energia"]
+        logos = "".join(f'<div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->{e(m)}</div>' for m in marcas)
         return f'''
 <section class="rtx" id="sobre">
   <div class="wrap rt">
@@ -306,15 +312,19 @@ def gerar(p):
       <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
       <figcaption><b>Eng. Matteo Celone</b><span>Engenheiro mecânico · M.Sc. · CREA 2118861648</span></figcaption>
     </figure>
-    <div>
+    <div class="bio">
       {rot("Responsável técnico")}
       <h2>Seu projeto assinado pelo <em class="g">Eng. Matteo Celone</em></h2>
-      <p class="lead">Formação no Brasil e na Itália, mestrado em engenharia e experiência na gestão de projetos de grandes indústrias. Matteo revisa e assina pessoalmente cada projeto — e é com ele que você fala no WhatsApp.</p>
-      <div class="cv">
-        {itens}
-      </div>
-      <div class="cta-row">{btn("Falar direto com o Eng. Matteo")}</div>
+      <p class="lead">Matteo é engenheiro mecânico formado pela UFRN e pela <strong>Politecnico di Torino</strong>, na Itália, mestre pela UFRN e especialista em análise de dados e gestão de projetos pela <strong>USP</strong>.</p>
+      <p>Na carreira, foi gestor de projetos industriais na <strong>Nestlé Brasil</strong> e atuou na <strong>Petrobras</strong> e na <strong>Brava Energia</strong>. Essa vivência em grandes indústrias está em cada projeto da Celone: cálculo rigoroso, desenho claro e solução que funciona na prática.</p>
+      <p>Todo projeto sai com a assinatura dele e ART recolhida no CREA.</p>
+      <div class="cta-row">{btn("Pedir proposta")}</div>
     </div>
+  </div>
+  <div class="wrap">
+    <p class="logos-label">Formação e experiência</p>
+    <div class="logos">{logos}</div>
+    <div class="ph ph-wide" role="img" aria-label="Escritório da Celone Engenharia em Natal/RN" data-foto="Foto real do escritório, com a marca na parede · 21:9"></div>
   </div>
 </section>
 '''
@@ -363,7 +373,7 @@ def gerar(p):
     <nav class="menu" aria-label="Serviços">
       {menu}
     </nav>
-    <a class="nav-cta js-zap" href="{ZAP}">Falar com o engenheiro</a>
+    <a class="nav-cta js-zap" href="{ZAP}">Pedir proposta</a>
   </div>
 </header>
 
@@ -392,7 +402,8 @@ def gerar(p):
 ''')
 
     if p["quando"]:
-        linhas = "\n      ".join(f'<div><span class="k">{e(k)}</span><p class="v">{e(v)}</p></div>' for k, v in p["quando"])
+        linhas = "\n      ".join(
+            f'<div><span class="k">{icone(q[2]) if len(q) > 2 else ""}{e(q[0])}</span><p class="v">{e(q[1])}</p></div>' for q in p["quando"])
         w(f'''
 <section>
   <div class="wrap">
@@ -413,7 +424,7 @@ def gerar(p):
         li = "".join(f"<li>{e(i)}</li>" for i in itens)
         para_html = f'<p class="para">{e(para)}</p>' if para else ""
         blocos.append(f'''      <div class="block">
-        <div class="ph" role="img" aria-label=""></div>
+        <div class="ph" role="img" aria-label="" data-foto="Imagem ilustrativa 3:2 · {e(titulo)}"></div>
         <div>
           {para_html}<h3>{e(titulo)}</h3>
           <p>{e(texto)}</p>
@@ -481,6 +492,7 @@ def gerar(p):
         casos.append(f'''      <article class="case">
         <div class="big{" txt" if (not big[0].isdigit() or len(big) > 6) else ""}">{e(big).replace(" ", "&nbsp;")}</div>
         <div><p class="who">{e(quem)}</p><h3>{e(titulo)}</h3><p>{e(texto)}</p></div>
+        <div class="ph ph-case" role="img" aria-label="" data-foto="Foto real da entrega (com autorização do cliente)"></div>
       </article>''')
     tambem = f'<p class="also"><strong>Também:</strong> {e(p["tambem"])}</p>' if p["tambem"] else ""
     w(f'''
@@ -495,7 +507,7 @@ def gerar(p):
 {chr(10).join(casos)}
     </div>
     {tambem}
-    <div class="cta-row">{btn("Falar com o engenheiro")}</div>
+    <div class="cta-row">{btn("Pedir proposta")}</div>
   </div>
 </section>
 ''')
@@ -551,7 +563,7 @@ def gerar(p):
   <div class="wrap">
     <span class="label">Peça sua proposta</span>
     <h2>{p["fechamento"]}</h2>
-    <div class="cta-row">{btn("Falar com o engenheiro")}</div>
+    <div class="cta-row">{btn("Pedir proposta")}</div>
   </div>
 </section>
 </main>

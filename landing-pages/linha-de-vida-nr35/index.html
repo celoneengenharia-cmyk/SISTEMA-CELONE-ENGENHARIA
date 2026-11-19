@@ -285,6 +285,24 @@ footer a{color:var(--text)}
   .cv div:nth-child(even){padding-left:0;border-left:0}
   .cv div:not(:nth-child(3n+1)){padding-left:20px;border-left:1px solid var(--line)}
 }
+
+/* Ícones de linha */
+.ico{display:block;width:30px;height:30px;margin-bottom:10px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* Legenda dos espaços de foto (sai quando a imagem real entrar) */
+.ph[data-foto]::before{content:attr(data-foto);position:absolute;left:14px;bottom:12px;z-index:1;font:600 .72rem/1.3 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.ph-case{aspect-ratio:3/2}
+.ph-wide{aspect-ratio:21/9;margin-top:36px}
+/* Bio do responsável técnico */
+.bio p+p{margin-top:14px}
+.bio .lead{margin-bottom:0}
+.logos-label{margin-top:56px;font:600 .74rem/1.4 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.logo-slot{min-height:72px;display:grid;place-items:center;text-align:center;padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font:600 .95rem/1.25 var(--f-title);color:var(--text)}
+.logo-slot img{max-height:40px;width:auto;filter:grayscale(1) brightness(1.8);opacity:.8}
+@media (min-width:860px){
+  .logos{grid-template-columns:repeat(6,1fr)}
+  .case{grid-template-columns:220px 1fr 300px}
+}
 </style>
 </head>
 <body>
@@ -301,7 +319,7 @@ footer a{color:var(--text)}
       <a href="/clientes-e-projetos/">Clientes</a>
       <a href="/#sobre">Sobre</a>
     </nav>
-    <a class="nav-cta js-zap" href="https://wa.me/5518991137803">Falar com o engenheiro</a>
+    <a class="nav-cta js-zap" href="https://wa.me/5518991137803">Pedir proposta</a>
   </div>
 </header>
 
@@ -352,7 +370,7 @@ footer a{color:var(--text)}
     <h2>Linha de vida, ancoragem e <em class="g">escada marinheiro</em></h2>
     <div class="blocks">
       <div class="block">
-        <div class="ph" role="img" aria-label=""></div>
+        <div class="ph" role="img" aria-label="" data-foto="Imagem ilustrativa 3:2 · Projeto de linha de vida"></div>
         <div>
           <h3>Projeto de linha de vida</h3>
           <p>Horizontal ou vertical, fixa ou temporária, dimensionada junto com a estrutura que vai segurá-la.</p>
@@ -360,7 +378,7 @@ footer a{color:var(--text)}
         </div>
       </div>
       <div class="block">
-        <div class="ph" role="img" aria-label=""></div>
+        <div class="ph" role="img" aria-label="" data-foto="Imagem ilustrativa 3:2 · Laudo de linha de vida existente"></div>
         <div>
           <h3>Laudo de linha de vida existente</h3>
           <p>Inspeção da linha já instalada, com parecer sobre a linha e a estrutura.</p>
@@ -368,7 +386,7 @@ footer a{color:var(--text)}
         </div>
       </div>
       <div class="block">
-        <div class="ph" role="img" aria-label=""></div>
+        <div class="ph" role="img" aria-label="" data-foto="Imagem ilustrativa 3:2 · Ancoragem"></div>
         <div>
           <h3>Ancoragem</h3>
           <p>Projeto ou inspeção de pontos de ancoragem, inclusive em prédios e fachadas.</p>
@@ -376,7 +394,7 @@ footer a{color:var(--text)}
         </div>
       </div>
       <div class="block">
-        <div class="ph" role="img" aria-label=""></div>
+        <div class="ph" role="img" aria-label="" data-foto="Imagem ilustrativa 3:2 · Escadas fixas"></div>
         <div>
           <h3>Escadas fixas</h3>
           <p>Inspeção e laudo de cada escada, com gaiola, degraus e ancoragem avaliados.</p>
@@ -441,18 +459,21 @@ footer a{color:var(--text)}
       <article class="case">
         <div class="big txt">3&nbsp;normas</div>
         <div><p class="who">Mina Borborema · Enaex</p><h3>NR-35 junto com NR-12 e NR-13</h3><p>Trabalho em altura junto com NR-12 e NR-13 de caminhões e compressores, no mesmo trabalho.</p></div>
+        <div class="ph ph-case" role="img" aria-label="" data-foto="Foto real da entrega (com autorização do cliente)"></div>
       </article>
       <article class="case">
         <div class="big txt">6&nbsp;escadas</div>
         <div><p class="who">KSS Motos</p><h3>Laudo de escadas fixas em pacote</h3><p>Seis escadas no mesmo local, inspecionadas e laudadas de uma vez.</p></div>
+        <div class="ph ph-case" role="img" aria-label="" data-foto="Foto real da entrega (com autorização do cliente)"></div>
       </article>
       <article class="case">
         <div class="big txt">Temporária</div>
         <div><p class="who">Galvão Tayrones</p><h3>Projeto de linha de vida temporária</h3><p>Projeto de linha de vida temporária com memorial de cálculo e ART.</p></div>
+        <div class="ph ph-case" role="img" aria-label="" data-foto="Foto real da entrega (com autorização do cliente)"></div>
       </article>
     </div>
     <p class="also"><strong>Também:</strong> 10 escadas em Manaus/AM, em pacote.</p>
-    <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Falar com o engenheiro</a></div>
+    <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir proposta</a></div>
   </div>
 </section>
 
@@ -488,20 +509,19 @@ footer a{color:var(--text)}
       <div class="portrait">Retrato real do Eng. Matteo Celone<br>(foto da proposta, alta resolução)</div>
       <figcaption><b>Eng. Matteo Celone</b><span>Engenheiro mecânico · M.Sc. · CREA 2118861648</span></figcaption>
     </figure>
-    <div>
+    <div class="bio">
       <span class="label">8 · Responsável técnico</span>
       <h2>Seu projeto assinado pelo <em class="g">Eng. Matteo Celone</em></h2>
-      <p class="lead">Formação no Brasil e na Itália, mestrado em engenharia e experiência na gestão de projetos de grandes indústrias. Matteo revisa e assina pessoalmente cada projeto — e é com ele que você fala no WhatsApp.</p>
-      <div class="cv">
-        <div><b>Politecnico di Torino</b><span>Engenharia mecânica na Itália</span></div>
-        <div><b>UFRN</b><span>Engenheiro mecânico e mestre</span></div>
-        <div><b>USP</b><span>Especialização em análise de dados e gestão de projetos</span></div>
-        <div><b>Nestlé Brasil</b><span>Gestor de projetos industriais</span></div>
-        <div><b>Petrobras · Brava Energia</b><span>Atuação em óleo e gás</span></div>
-        <div><b>CREA 2118861648</b><span>ART em todo projeto</span></div>
-      </div>
-      <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Falar direto com o Eng. Matteo</a></div>
+      <p class="lead">Matteo é engenheiro mecânico formado pela UFRN e pela <strong>Politecnico di Torino</strong>, na Itália, mestre pela UFRN e especialista em análise de dados e gestão de projetos pela <strong>USP</strong>.</p>
+      <p>Na carreira, foi gestor de projetos industriais na <strong>Nestlé Brasil</strong> e atuou na <strong>Petrobras</strong> e na <strong>Brava Energia</strong>. Essa vivência em grandes indústrias está em cada projeto da Celone: cálculo rigoroso, desenho claro e solução que funciona na prática.</p>
+      <p>Todo projeto sai com a assinatura dele e ART recolhida no CREA.</p>
+      <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir proposta</a></div>
     </div>
+  </div>
+  <div class="wrap">
+    <p class="logos-label">Formação e experiência</p>
+    <div class="logos"><div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->Politecnico di Torino</div><div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->UFRN</div><div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->USP</div><div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->Nestlé Brasil</div><div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->Petrobras</div><div class="logo-slot"><!-- trocar por <img> do logo, se autorizado -->Brava Energia</div></div>
+    <div class="ph ph-wide" role="img" aria-label="Escritório da Celone Engenharia em Natal/RN" data-foto="Foto real do escritório, com a marca na parede · 21:9"></div>
   </div>
 </section>
 
@@ -524,7 +544,7 @@ footer a{color:var(--text)}
   <div class="wrap">
     <span class="label">Peça sua proposta</span>
     <h2>Diga onde fica a linha ou quantas escadas são e a altura. <em class="g">Mandamos valor e prazo no mesmo dia.</em></h2>
-    <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Falar com o engenheiro</a></div>
+    <div class="cta-row"><a class="btn js-zap" href="https://wa.me/5518991137803"><svg><use href="#wa"/></svg>Pedir proposta</a></div>
   </div>
 </section>
 </main>
